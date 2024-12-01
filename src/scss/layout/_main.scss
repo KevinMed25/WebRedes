@@ -1,0 +1,104 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor {
+    width: 80%;
+    max-width: 95rem;
+    margin: 0 auto;
+}
+
+.portada {
+    margin-top: 4rem;
+    padding: 0;
+    text-align: center;
+    height: 48rem;
+    background: v.$lila;
+    background-image:url(/src/img/AllIsometricNov2-10.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.8rem;
+    position: relative;
+}
+
+.titulo {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    right: 1.2rem;
+    background-color: rgba(43, 6, 85, 0.7);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: v.$blanco;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0.5rem 0 0;
+        font-size: 2.1rem;
+    }
+}
+
+.introduccion {
+     
+    h2 {
+        font-size: 2.4rem;
+        margin: 2rem 4rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        margin: 1rem 4rem;
+        text-align: justify;
+    }
+}
+
+.contenido {
+    h2 {
+        text-align: center;
+    }
+}
+
+.contenedor-temas {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    .tema {
+        padding: 1.5rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+
+        img {
+            max-width: 25rem;
+            height: 25rem;
+            object-fit: cover;
+            border-radius: 0.8rem;
+        }
+
+        h2 {
+            max-width: 25rem; 
+            font-size: 2.4rem;
+            color: v.$morado;
+        }
+
+        p {
+            max-width: 25rem; 
+            font-size: 1.8rem;
+            color: v.$morado;
+        }
+        
+        transition: scale 0.3s ease;
+    }
+
+    .tema:hover {
+        scale: 1.03;
+    }
+    
+}

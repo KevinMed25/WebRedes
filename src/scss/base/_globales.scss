@@ -1,23 +1,22 @@
+@use 'variables' as v;
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
 body {
-    // font-family: $fuente_principal;
+    font-family: v.$fuente_principal;
+    background: v.$fondo;
     font-size: 1.6rem;
     line-height: 1.8;
 }
 p {
     // color: $negro;
     font-size: 2rem;
-}
-.contenedor {
-    width: 90%;
-    max-width: 120rem;
-    margin: 0 auto;
 }
 
 a {

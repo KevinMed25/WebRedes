@@ -1,5 +1,8 @@
 // Fuentes
-$fuente-principal: 'Outfit', sans-serif;
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+$fuente-principal: "Noto Sans";
 
 // Tamaño de Media Queries
 $telefono: 480px;
@@ -8,17 +11,17 @@ $desktop: 1024px;
 $xl_desktop: 1200px;
 
 // Colores
-$azul: #007df4;
-$secundario: #00c8c2;
+$morado: #591FB7;
+$lila2:#B07BF5;
+$lila:#7B5ECB;
+$secundario: #E6DEF2;
+$fondo: #F4F0F9;
 
 $negro: #1a1b15;
 $blanco: #FFFFFF;
 $gris: #64748B;
 $gris-claro: #F8FAFC;
 $gris-oscuro: #1E293B;
-
-$rojo: rgb(169, 0, 0);
-$verde: #02db02;
 
 // Fuentes
 $delgada: 300;

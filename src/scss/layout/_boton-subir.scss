@@ -1,0 +1,24 @@
+.gotop-container{
+
+    position: fixed;
+    bottom: 8rem;
+    right: 8rem;
+
+    .oculto {
+        display: none;
+    }
+    
+    .gotop-btn{
+        transition: opacity 0.4s ease; 
+        padding: 0.5rem;
+    }
+
+    svg {
+        transition: transform 0.2s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+}
