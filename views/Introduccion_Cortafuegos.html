@@ -21,70 +21,35 @@
     </header>
     <main class="contenedor">
         <h1 class="titulo-tema">
-            Seguridad en una red: Redes Perimetrales
+            1. Introduccion a los Cortafuegos
         </h1>
-        <div class="intro-seguridad">
+        <div class="intro-cortafuegos">
             <p>
-                La seguridad perimetral es uno de los métodos posibles de defensa de una red, basado en el establecimiento de recursos de segurización en el perímetro externo de la red y a diferentes niveles. Esto nos permite definir niveles de confianza, permitiendo el acceso de determinados usuarios internos o externos a determinados servicios, y denegando cualquier tipo de acceso a otros. En palabras más simples, es un mecanismo que permite aceptar o bloquear datos procedentes o destinados a un ordenador concreto ubicado fuera de la red local. 
+                Una vez conocido el concepto de seguridad perimetral, es importante comprender el papel de los cortafuegos o firewalls, ya que estos son una de las herramientas clave en la implementación de esta estrategia de defensa. Un firewall o cortafuegos es un dispositivo que se utiliza para proteger la red interna de una organización. Esta protección se lleva a cabo mediante la separación de la red interna del mundo exterior, o Internet. 
             </p>
-            <div class="img-seg">
-                <img src="../src/img/seguridadRedes-removebg-preview.png" alt="">
-                <p>Figura 1. Infraestructura típica</p>
+            <p>
+                Todos los mensajes que entran o salen de la red interna a través del firewall son examinados para verificar si cumplen las normas de seguridad especificadas en las reglas del firewall. Un firewall puede hacer dos cosas. Puede bloquear o permitir una comunicación. Por lo general, se permiten todas las comunicaciones de la red interna a la red externa (Internet), pero si la política de seguridad establece una regla impidiendo el paso de un tipo de mensajes, el firewall lo bloqueará. Por ejemplo, a veces se impiden conexiones a sitios que no sean de confianza ni a otros lugares considerados una amenaza para la seguridad o inapropiados para la organización.
+            </p>
+            <div class="img-cortafuegos">
+                <img src="../src/img/Implantación usando firewalls.png" alt="">
+                <p>Figura 2. Implantación usando firewalls.</p>
             </div>
-        </div>
-        <div class="temas-seguridad">
-            <div>
-                <h2>
-                    Puedes encontrar información acerca de:
-                </h2>
-                <ul>
-                    <li><strong><a href="./Introduccion_Cortafuegos.html">1. Introducción a los cortafuegos</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./Introduccion_Cortafuegos.html#DMZ">
-                                    1.1 Zona Desmilitarizada (DMZ)
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./Introduccion_Cortafuegos.html#Muro_doble">
-                                    1.1.1 Construcciones de "Muro Doble"
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong><a href="./IDS.html">2. Sistemas de detección de intrusión (IDS)</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./IDS.html#Clasificacion">
-                                    2.1 Clasificación de un IDS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./IDS.html#Diferencia">
-                                    2.2 Diferencia entre Firewall e IDS
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong><a href="./Alternativas_De_Implantacion.html">3. Alternativas de Implantación</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./Alternativas_De_Implantacion.html#apantallados">
-                                    3.1 Uso de routers “apantallados”
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./Alternativas_De_Implantacion.html#proxys">
-                                    3.2 Uso de proxys
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+            <h2 id="DMZ">
+                1.1 Zona Desmilitarizada (DMZ)
+            </h2>
+            <h4 id="Muro_doble">
+                1.1.1 Construcciones de "Muro Doble"
+            </h4>
+            <p>
+                Algunos firewalls se construyen con la técnica de "muro doble", en este caso el firewall consta de dos sistemas separados físicamente (muro exterior e interior) conectados por una red semiprivada, si alguien es capaz de comprometer el muro exterior, el muro interior protege la red impidiendo el acceso desde la red semi-privada y aislando la red interior.
+            </p>
+            <div class="img-cortafuegos">
+                <img src="../src/img/Figura 3. Esquema de “muro doble”.png" alt="">
+                <p>Figura 3. Esquema de “muro doble”.</p>
             </div>
-            <div class="pika">
-                <img src="../src/img/pika.png" alt="">
-            </div>
+            <p>
+                El muro exterior sólo permite el tráfico hacia los servidores semi-públicos alojados en la DMZ. El muro interior se rige por el "pesimismo", esto es, solo acepta paquetes si responden a una petición originada en el interior de la red o que provienen de uno de los servidores alojados en la DMZ (por defecto guarda toda la información sobre las transacciones).
+            </p>
         </div>
     </main>
     <div class="gotop-container">

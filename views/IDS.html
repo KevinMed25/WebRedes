@@ -21,69 +21,90 @@
     </header>
     <main class="contenedor">
         <h1 class="titulo-tema">
-            Seguridad en una red: Redes Perimetrales
+            2. Sistemas de detección de intrusión (IDS)
         </h1>
-        <div class="intro-seguridad">
+        <div class="intro-ids">
             <p>
-                La seguridad perimetral es uno de los métodos posibles de defensa de una red, basado en el establecimiento de recursos de segurización en el perímetro externo de la red y a diferentes niveles. Esto nos permite definir niveles de confianza, permitiendo el acceso de determinados usuarios internos o externos a determinados servicios, y denegando cualquier tipo de acceso a otros. En palabras más simples, es un mecanismo que permite aceptar o bloquear datos procedentes o destinados a un ordenador concreto ubicado fuera de la red local. 
+                Los IDS (Sistemas de detección de intrusión) son una especie de sistema de gestión de seguridad para los ordenadores y redes. Un IDS recopila y analiza información de un ordenador o una red para identificar posibles violaciones de seguridad, incluyendo tanto el mal uso (ataques desde dentro de la organización) como las intrusiones (ataques de fuera de la organización). También inspecciona toda la actividad entrante y saliente por la red e identifica patrones sospechosos que pueden identificar un ataque de alguien que trata de entrar o comprometer un sistema. Estos aparecieron para dar respuesta al creciente número de ataques a los principales lugares de interés y redes.
             </p>
-            <div class="img-seg">
-                <img src="../src/img/seguridadRedes-removebg-preview.png" alt="">
-                <p>Figura 1. Infraestructura típica</p>
-            </div>
-        </div>
-        <div class="temas-seguridad">
-            <div>
-                <h2>
-                    Puedes encontrar información acerca de:
-                </h2>
-                <ul>
-                    <li><strong><a href="./Introduccion_Cortafuegos.html">1. Introducción a los cortafuegos</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./Introduccion_Cortafuegos.html#DMZ">
-                                    1.1 Zona Desmilitarizada (DMZ)
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./Introduccion_Cortafuegos.html#Muro_doble">
-                                    1.1.1 Construcciones de "Muro Doble"
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong><a href="./IDS.html">2. Sistemas de detección de intrusión (IDS)</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./IDS.html#Clasificacion">
-                                    2.1 Clasificación de un IDS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./IDS.html#Diferencia">
-                                    2.2 Diferencia entre Firewall e IDS
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong><a href="./Alternativas_De_Implantacion.html">3. Alternativas de Implantación</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./Alternativas_De_Implantacion.html#apantallados">
-                                    3.1 Uso de routers “apantallados”
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./Alternativas_De_Implantacion.html#proxys">
-                                    3.2 Uso de proxys
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="pika">
-                <img src="../src/img/pika.png" alt="">
+            <p>
+                Los IDS utilizan técnicas para evaluar una vulnerabilidad, estas funciones incluyen:
+            </p>
+            <ul>
+                <li>
+                    Análisis de los usuarios y actividades del sistema
+                </li>
+                <li>
+                    Análisis de las configuraciones del sistema y de sus vulnerabilidades
+                </li>
+                <li>
+                    Evaluación de un sistema e integridad sus archivos
+                </li>
+                <li>
+                    Capacidad de reconocer patrones típicos de los ataques
+                </li>
+                <li>
+                    Análisis de los patrones de actividad anormales
+                </li>
+            </ul>
+            <h2 id="Clasificacion">
+                2.1 Clasificación de un IDS
+            </h2>
+            <p>
+                Un Sistema de Detección de Intrusos puede clasificarse en detección de mal uso y detección de anomalías:
+            </p>
+            <ul>
+                <li>
+                    <strong>Detección de mal uso:</strong>
+                    <p>
+                        El IDS analiza la información que recopila y la compara con grandes bases de datos de firmas de ataques. La técnica de detección de intrusos basada en firma de ataque consiste en la búsqueda de "firmas" (secuencias de acciones típicas de un ataque) en todas las comunicaciones que pasan por la red. 
+                    </p>
+                </li>
+                <li>
+                    <strong>Detección de anomalías:</strong>
+                    <p>
+                        El administrador del sistema define el estado normal de tráfico de la red, protocolos y tamaños típicos de los intercambios. El detector de anomalías compara el estado en cada momento con el estado normal y a partir de las diferencias se buscan anomalías de comportamiento, que pueden ser debidas a algún ataque.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Por otro lado, un IDS se puede clasificar según su ubicación y respuesta:
+            </p>
+            <ul>
+                <li>
+                    <strong>Basados en red, (NIDS, Network-based system): </strong>
+                    <p>
+                        Se analizan las comunicaciones que se intercambian por la red. El NIDS puede detectar mensajes maliciosos diseñados de forma que las reglas de filtrado de un firewall no lo detecten.
+                    </p>
+                </li>
+                <li>
+                    <strong>Basados en equipo (HIDS, Host-based system): </strong>
+                    <p>
+                        El IDS analiza toda la actividad en cada equipo individual. Sistemas pasivos o sistemas reactivos.
+                    </p>
+                </li>
+                <li>
+                    <strong>Sistema pasivo:</strong>
+                    <p>
+                        el IDS detecta un posible fallo de seguridad, registra la información y envía las señales de alerta.
+                    </p>
+                </li>
+                <li>
+                    <strong>Sistema reactivo:</strong>
+                    <p>
+                        El IDS responde a una actividad sospechosa cerrando la sesión de un usuario o reprogramando el firewall para bloquear el tráfico de red que tiene su origen en una entidad sospechosa.
+                    </p>
+                </li>
+            </ul>
+            <h2 id="Diferencia">
+                2.2 Diferencia entre Firewall e IDS
+            </h2>
+            <p>
+                Un IDS se diferencia de un firewall en su enfoque. Mientras que un firewall limita el acceso entre redes para prevenir intrusiones externas, no detecta ni alerta sobre ataques que ya hayan ocurrido, especialmente si se originan dentro de la red. En cambio, un IDS evalúa posibles intrusiones una vez que estas han tenido lugar, emitiendo alarmas para advertir sobre actividades sospechosas. Además, tiene la capacidad de analizar ataques que surjan desde dentro de un sistema, complementando la protección que ofrece un firewall.
+            </p>
+            <div class="img-ids">
+               <img src="../src/img/Figura 4. Diagrama con firewall e IDS.png" alt="">
+                <p>Figura 4. Diagrama con firewall e IDS.</p>
             </div>
         </div>
     </main>
