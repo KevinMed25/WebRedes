@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/build/css/app.css">
-    <title>Referencias</title>
+    <title>Establecimiento de un enlace seguro de red: Tunelización</title>
 </head>
 <body>
     <header class="header">
@@ -21,44 +21,31 @@
     </header>
     <main class="contenedor">
         <h1 class="titulo-tema">
-            Este trabajo fue realizado por: 
+            3. Protocolos de Tunelización: PPTP y L2TP
         </h1>
-        <div class="referencias">
-            <ul>
-                <li>
-                    <p>
-                        Josué Israel Canul Ordoñez 
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Dioné Guadalupe Martín Valdez 
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Kevin Alejandro Medina Padilla  
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Daniel Méndez Sierra  
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Adiel Herrera Herrera
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Arturo Andrés Quezada Suárez  
-                    </p>
-                </li>
-            </ul>
-            <div class="char">
-                <img src="../src/img/Charizard.png" alt="">
-            </div>
+        <div class="intro-protocolos">
+            <h2 id="pptp">
+                3.1 Point-to-Point Tunneling Protocol (PPTP)
+            </h2>
+            <p>
+                El protocolo Point-to-Point Tunneling Protocol (PPTP) es uno de los más antiguos utilizados en las redes VPN. Propuesto como estándar en 1996 por el foro de PPTP, un grupo integrado por compañías como Ascend Communications, ECI Telematics y Microsoft, fue diseñado originalmente como una extensión del protocolo PPP (Point-to-Point Protocol) para mejorar su seguridad. PPTP agrega funcionalidades de cifrado de paquetes y autenticación de usuarios al antiguo protocolo PPP y opera en la capa de enlace de datos.
+            </p>
+            <p>
+                Este protocolo ofrece dos métodos de autenticación para los usuarios: el Extensible Authentication Protocol (EAP), desarrollado específicamente para PPTP, y el Challenge Handshake Authentication Protocol (CHAP). Este último es un proceso de autenticación en tres pasos, en el que el cliente envía un código al servidor, el servidor lo verifica y, tras autenticarlo, responde al cliente.
+            </p>
+            <h2 id="l2tp">
+                3.2 Layer 2 Tunneling Protocol (L2TP)
+            </h2>
+            <p>
+                Por otro lado, el Layer 2 Tunneling Protocol (L2TP) fue diseñado como una mejora explícita de PPTP. Al igual que PPTP, L2TP opera en la capa de enlace de datos del modelo OSI, pero introduce varias mejoras significativas. Entre ellas, soporta una mayor variedad de métodos de autenticación, como CHAP, EAP, PAP, SPAP y MS-CHAP. Además, a diferencia de PPTP, que trabaja únicamente sobre redes IP estándar, L2TP también puede operar a través de redes X.25, ampliando su versatilidad. 
+            </p>
+            <p>
+                Cuando se envía un paquete desde París, el enrutador encapsula el paquete IPv6 dentro de un encabezado IPv4, dirigiéndolo al extremo IPv4 del enrutador multiprotocolo conectado a la red IPv6 en Londres. Al llegar, el paquete IPv4 es desempaquetado, recuperando el paquete IPv6 original, que puede continuar su tránsito dentro de la red IPv6 de destino. En resumen, el paquete IPv6 es temporalmente envuelto en un paquete IPv4 para atravesar la conexión intermedia.
+            </p>
+            <div class="img-protocolos">
+                <img src="../src/img/Figura 5. Túnel L2TPv3 entre Routers para Conexión de Redes Remotas.png" alt="">
+                 <p>Figura 5. Túnel L2TPv3 entre Routers para Conexión de Redes Remotas.</p>
+             </div>
         </div>
     </main>
     <div class="gotop-container">
