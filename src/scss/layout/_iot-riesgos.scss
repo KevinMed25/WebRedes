@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.intro-riesgos {
+    p {
+        margin: 0;
+        margin-bottom: 2rem;
+        padding: 0 4rem;
+        text-align: center;
+    }
+
+    .img-riesgos {
+        justify-self: center;
+        max-width: 60%;
+        margin-top: 3rem;
+
+        img {
+            max-width: 100%;
+            border-radius: 0.8rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+
+    h1 {
+        margin: 0 4rem;
+    }
+
+}

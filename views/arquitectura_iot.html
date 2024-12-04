@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/build/css/app.css">
-    <title>Seguridad de redes: Redes Perimetrales</title>
+    <title>IoT: Arquitectura</title>
 </head>
 
 <body>
@@ -46,76 +46,66 @@
     </header>
     <main class="contenedor">
         <h1 class="titulo-tema">
-            Seguridad en una red: Redes Perimetrales
+            1. Arquitectura del IoT y Protocolos
         </h1>
-        <div class="intro-seguridad">
+        <div class="intro-arquitectura">
             <p>
-                La seguridad perimetral es uno de los métodos posibles de defensa de una red, basado en el
-                establecimiento de recursos de segurización en el perímetro externo de la red y a diferentes niveles.
-                Esto nos permite definir niveles de confianza, permitiendo el acceso de determinados usuarios internos o
-                externos a determinados servicios, y denegando cualquier tipo de acceso a otros. En palabras más
-                simples, es un mecanismo que permite aceptar o bloquear datos procedentes o destinados a un ordenador
-                concreto ubicado fuera de la red local.
+                El IoT se estructura en varias capas que aseguran su funcionalidad, integridad y seguridad. Estas capas
+                incluyen:
             </p>
-            <div class="img-seg">
-                <img src="../src/img/seguridadRedes-removebg-preview.png" alt="">
-                <p>Figura 1. Infraestructura típica</p>
+            <div class="img-protocolos">
+                <img src="../src/img/Figura 2. Capas de la arquitectura del Internet de las cosas.png" alt="">
+                <p>Figura 2. Capas de la arquitectura del Internet de las cosas.</p>
             </div>
-        </div>
-        <div class="temas-seguridad">
-            <div>
-                <h2>
-                    Puedes encontrar información acerca de:
-                </h2>
-                <ul>
-                    <li><strong><a href="./Introduccion_Cortafuegos.html">1. Introducción a los cortafuegos</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./Introduccion_Cortafuegos.html#DMZ">
-                                    1.1 Zona Desmilitarizada (DMZ)
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./Introduccion_Cortafuegos.html#Muro_doble">
-                                    1.1.1 Construcciones de "Muro Doble"
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong><a href="./IDS.html">2. Sistemas de detección de intrusión (IDS)</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./IDS.html#Clasificacion">
-                                    2.1 Clasificación de un IDS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./IDS.html#Diferencia">
-                                    2.2 Diferencia entre Firewall e IDS
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong><a href="./Alternativas_De_Implantacion.html">3. Alternativas de
-                                Implantación</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./Alternativas_De_Implantacion.html#apantallados">
-                                    3.1 Uso de routers “apantallados”
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./Alternativas_De_Implantacion.html#proxys">
-                                    3.2 Uso de proxys
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="pika">
-                <img src="../src/img/pika.png" alt="">
-            </div>
+            <h2 id="Capas">
+                1.1 Capas del Internet of Things
+            </h2>
+            <p>
+                <b>1. Capa de Percepción (Perception Layer)</b>: Esta es la capa física donde los sensores y actuadores
+                recopilan datos del entorno. Puede incluir sensores de temperatura, presión, humedad, movimiento, luz,
+                entre otros. También incluye actuadores y tecnologías de identificación como RFID y etiquetas NFC.
+            </p>
+            <p>
+                <b>2. Capa de Red (Network Layer)</b>: Es responsable de transmitir los datos recopilados desde los
+                dispositivos de la capa de percepción a los sistemas de procesamiento. Utiliza tecnologías como Wi-Fi,
+                Zigbee, Bluetooth, LoRaWAN y 5G, junto con protocolos como MQTT y CoAP.
+            </p>
+            <p>
+                <b>3. Capa de Procesamiento (Processing Layer)</b>: Aquí, los datos recopilados son analizados,
+                almacenados y
+                gestionados. Incluye computación en la nube, edge computing y sistemas de análisis en tiempo real.
+            </p>
+            <p>
+                <b>4. Capa de Aplicación (Application Layer)</b>: Proporciona interfaces para que los usuarios
+                interactúen con
+                los dispositivos IoT, como aplicaciones móviles o web, y sistemas de inteligencia artificial para
+                análisis predictivo.
+            </p>
+            <h2 id="Protocolos">
+                1.2 Protocolos del Internet of Things
+            </h2>
+            <p>
+                El éxito del IoT depende en gran medida de los protocolos que garantizan una comunicación eficiente y
+                segura entre dispositivos. Los principales son:
+            </p>
+            <p>
+                <b>MQTT (Message Queuing Telemetry Transport)</b>: Diseñado para dispositivos de baja potencia y redes
+                con
+                ancho de banda limitado.
+            </p>
+            <p>
+                <b>CoAP (Constrained Application Protocol)</b>: Ideal para dispositivos con recursos restringidos,
+                basado en
+                HTTP, pero optimizado para IoT.
+            </p>
+            <p>
+                <b>HTTP/HTTPS</b>: Utilizado principalmente en dispositivos más potentes.
+            </p>
+            <p>
+                <b>LoRaWAN (Low Range Wide Area Network)</b>: Protocolo de baja potencia y largo alcance, ideal para
+                monitoreo
+                ambiental o agrícola.
+            </p>
         </div>
     </main>
     <div class="gotop-container">
