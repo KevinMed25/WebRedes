@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/build/css/app.css">
+    <link rel="stylesheet" href="../build/css/app.css">
     <title>Establecimiento de un enlace seguro de red: Tunelización</title>
 </head>
 <body>
@@ -15,67 +15,54 @@
         <nav class="nav-bar">
             <a href="../index.html">Inicio</a>
             <a href="../index.html#Temas">Temas</a>
-            <a href="/views/Equipo.html">Equipo</a>
-            <a href="/views/Referencias.html">Referencias</a>
+            <a href="./Equipo.html">Equipo</a>
+            <a href="./Referencias.html">Referencias</a>
         </nav>
     </header>
     <main class="contenedor">
         <h1 class="titulo-tema">
             Establecimiento de un enlace seguro de red: Tunelización (Tunneling) 
         </h1>
-        <div class="intro-seguridad">
+        <div class="intro-tunneling">
             <p>
-                La seguridad perimetral es uno de los métodos posibles de defensa de una red, basado en el establecimiento de recursos de segurización en el perímetro externo de la red y a diferentes niveles. Esto nos permite definir niveles de confianza, permitiendo el acceso de determinados usuarios internos o externos a determinados servicios, y denegando cualquier tipo de acceso a otros. En palabras más simples, es un mecanismo que permite aceptar o bloquear datos procedentes o destinados a un ordenador concreto ubicado fuera de la red local. 
+                La conexión de distintas redes ya sea PAN, LAN, MAN o WAN, idealmente se realizaría teniendo un protocolo en común, sin embargo, en la vida real esto no es así. Existen distintos protocolos para cada distinta capa que conforma una red, ejemplos de estas son el Ethernet, Internet por cable, redes de telefonía fija y móvil, IEEE 802.11 y muchas más. Esta configuración ha propiciado distintos problemas en el establecimiento de las conexiones, siendo un ejemplo que las redes Ethernet y los satélites casi siempre difieren. El uso de infraestructura existente e intercomunicarlos con las nuevas tecnologías ha causado divergencia en las redes. 
             </p>
-            <div class="img-seg">
-                <img src="../src/img/seguridadRedes-removebg-preview.png" alt="">
-                <p>Figura 1. Infraestructura típica</p>
+            <p>
+                La existencia de variedad de redes recae en lo valioso que es tener la interconexión entre estas. El postulado de Bob Metcalfe establece que el valor de una red con N nodos es proporcional al número de conexiones posibles entre dichos nodos. Por este motivo, siempre existirá un incentivo para la interconexión entre redes más pequeñas a pesar de las distintas tecnologías que habrá que adaptar de alguna forma para poder lograrlo. El valor de la interconexión entre distintas redes se ve reflejado en Internet, en esta perspectiva el alcance es el principal atractivo, ya que su popularidad se debe a la posibilidad de enviar paquetes a distintos hosts de la mayoría de las interconexiones que existen a nivel mundial.
+            </p>
+            <div class="img-tun">
+                <img src="../src/img/Figura 1. Encapsulación IPv6 en Túneles IPv4.png" alt="">
+                <p>Figura 1. Encapsulación IPv6 en Túneles IPv4: Flujo de Datos a Través de Redes Heterogéneas.</p>
             </div>
         </div>
-        <div class="temas-seguridad">
+        <div class="temas-tunneling">
             <div>
                 <h2>
                     Puedes encontrar información acerca de:
                 </h2>
                 <ul>
-                    <li><strong><a href="./Introduccion_Cortafuegos.html">1. Introducción a los cortafuegos</a></strong>
+                    <li>
+                        <strong><a href="./Tunelización.html">1. Tunelización</a></strong>
+                    </li>
+                    <li><strong><a href="./Distintas_Aplicaciones.html">2. Distintas aplicaciones</a></strong>
                         <ul>
                             <li>
-                                <a href="./Introduccion_Cortafuegos.html#DMZ">
-                                    1.1 Zona Desmilitarizada (DMZ)
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./Introduccion_Cortafuegos.html#Muro_doble">
-                                    1.1.1 Construcciones de "Muro Doble"
+                                <a href="./Distintas_Aplicaciones.html#vpn">
+                                    2.1	Redes superpuestas y VPN
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li><strong><a href="./IDS.html">2. Sistemas de detección de intrusión (IDS)</a></strong>
+                    <li><strong><a href="./Protocolos_Tunelización.html">3. Protocolos de Tunelización: PPTP y L2TP</a></strong>
                         <ul>
                             <li>
-                                <a href="./IDS.html#Clasificacion">
-                                    2.1 Clasificación de un IDS
+                                <a href="./Protocolos_Tunelización.html#pptp">
+                                    3.1 Point-to-Point Tunneling Protocol (PPTP)
                                 </a>
                             </li>
                             <li>
-                                <a href="./IDS.html#Diferencia">
-                                    2.2 Diferencia entre Firewall e IDS
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong><a href="./Alternativas_De_Implantacion.html">3. Alternativas de Implantación</a></strong>
-                        <ul>
-                            <li>
-                                <a href="./Alternativas_De_Implantacion.html#apantallados">
-                                    3.1 Uso de routers “apantallados”
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./Alternativas_De_Implantacion.html#proxys">
-                                    3.2 Uso de proxys
+                                <a href="./Protocolos_Tunelización.html#l2tp">
+                                    3.2	Layer 2 Tunneling Protocol (L2TP)
                                 </a>
                             </li>
                         </ul>

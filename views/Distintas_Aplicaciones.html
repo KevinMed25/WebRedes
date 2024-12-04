@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../build/css/app.css">
-    <title>Seguridad de redes: Redes Perimetrales</title>
+    <title>Establecimiento de un enlace seguro de red: Tunelización</title>
 </head>
 <body>
     <header class="header">
@@ -21,32 +21,22 @@
     </header>
     <main class="contenedor">
         <h1 class="titulo-tema">
-            3. Alternativas de Implantación
-        </h1>  
-        <div class="intro-alt">
-            <h2 id="apantallados">
-                3.1 Uso de routers “apantallados” 
+            2. Distintas aplicaciones
+        </h1>
+        <div class="intro-aplicaciones">
+            <h2 id="vpn">
+                2.1 Redes superpuestas y VPN
             </h2>
             <p>
-                Un router es un dispositivo cuya misión es conectar dos o más redes. En una definición más amplia se trata de cualquier dispositivo que cuente con dos o más interfaces conectadas a redes diferentes y que controle el tráfico de paquetes entre las redes que conecta. El "router apantallado", en cambio, analiza el paquete de información al detalle y establece si puede ser enviado a su destino en función de las políticas de seguridad del sistema.
+                A las redes resultantes que se construyen a través de la interconexión por la técnica de la tunelización se les conoce como redes superpuestas. Una desventaja de esta técnica es que los paquetes que pasan a través de la red tunelizada no pueden llegar a un host distinto del que se tiene como destinatario. A pesar de ello, esto se convierte en una ventaja gracias a las redes VPN, siendo esta última una red superpuesta que se utiliza para proporcionar una medida de seguridad. 
             </p>
-            <div class="img-alt">
-               <img src="../src/img/Figura 5. Implantación usando routers apantallados.png" alt="">
-                <p>Figura 5. Implantación usando routers apantallados.</p>
+            <p>
+                Esencialmente, una VPN permite utilizar internet para establecer conexiones seguras entre un usuario remoto o un sitio y una ubicación central. Los paquetes que se transmiten a través de esta conexión están encriptados, lo que garantiza la privacidad de los datos.
+            </p>
+            <div class="img-aplicaciones">
+                <img src="../src/img/Figura 4. Conexión Segura a través de una VPN entre Oficinas Remotas.png" alt="">
+                 <p>Figura 4. Conexión Segura a través de una VPN entre Oficinas Remotas.</p>
             </div>
-            <h2 id="proxys">
-                3.2 Uso de proxys 
-            </h2>
-            <p>
-                Además del filtrado de paquetes, es habitual que se utilicen aplicaciones (software) para reenviar o bloquear conexiones a servicios, como por ejemplo, Telnet, HTTP o FTP. A tales aplicaciones se les denomina "servicios proxy", mientras que al sistema donde se ejecutan se le llama "gateway de aplicación". 
-            </p>
-            <p>
-                Los servicios proxy ofrecen múltiples ventajas orientadas a fortalecer la seguridad. Principalmente, restringen el acceso únicamente a los servicios para los cuales se ha configurado un proxy. Por ejemplo, si el "gateway de aplicación" de una organización incluye proxies solo para Telnet, HTTP y FTP, cualquier otro servicio quedará automáticamente inaccesible para todos los usuarios, reforzando así el control sobre las actividades permitidas en la red.
-            </p>
-            <div class="img-alt">
-                <img src="../src/img/Figura 6. Implantación usando un servidor proxy.png" alt="">
-                 <p>Figura 6. Implantación usando un servidor proxy.</p>
-             </div>
         </div>
     </main>
     <div class="gotop-container">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../build/css/app.css">
-    <title>Seguridad de redes: Redes Perimetrales</title>
+    <title>Establecimiento de un enlace seguro de red: Tunelización</title>
 </head>
 <body>
     <header class="header">
@@ -21,32 +21,29 @@
     </header>
     <main class="contenedor">
         <h1 class="titulo-tema">
-            3. Alternativas de Implantación
-        </h1>  
-        <div class="intro-alt">
-            <h2 id="apantallados">
-                3.1 Uso de routers “apantallados” 
-            </h2>
+            1. Tunelización 
+        </h1>
+        <div class="intro-tunel">
             <p>
-                Un router es un dispositivo cuya misión es conectar dos o más redes. En una definición más amplia se trata de cualquier dispositivo que cuente con dos o más interfaces conectadas a redes diferentes y que controle el tráfico de paquetes entre las redes que conecta. El "router apantallado", en cambio, analiza el paquete de información al detalle y establece si puede ser enviado a su destino en función de las políticas de seguridad del sistema.
+                Dentro de todas las cuestiones en las cuales la interconexión de las redes puede provocar algún problema, existe un caso especial el cual es fácil de manejar, esto incluso con distintos protocolos de red. Dicho caso es cuando el host de origen y el del destinatario son el mismo tipo de red, pero existe una red intermedia que es de distinto tipo. Para poder llevar a cabo la conexión de conexión de estas redes se hace uso de una técnica llamada Tunelización. 
             </p>
-            <div class="img-alt">
-               <img src="../src/img/Figura 5. Implantación usando routers apantallados.png" alt="">
-                <p>Figura 5. Implantación usando routers apantallados.</p>
+            <p>
+                Para ilustrar cómo funciona esta técnica, imaginemos a una persona que desea conducir de París a Londres. Durante el trayecto, puede manejar su automóvil sin problemas tanto en las carreteras de Francia como en las de Inglaterra. Sin embargo, para cruzar el Canal de la Mancha, es necesario cargar el automóvil en un tren de alta velocidad que lo transporta a través del Eurotúnel, ya que en esa vía solo pueden circular ferrocarriles. Una vez superado el canal, el automóvil puede reanudar su recorrido con normalidad. 
+            </p>
+            <div class="img-tunel">
+                <img src="../src/img/Figura 2. Analogía del Eurotúnel para la Encapsulación de Redes.png" alt="">
+                 <p>Figura 2. Analogía del Eurotúnel para la Encapsulación de Redes.</p>
             </div>
-            <h2 id="proxys">
-                3.2 Uso de proxys 
-            </h2>
             <p>
-                Además del filtrado de paquetes, es habitual que se utilicen aplicaciones (software) para reenviar o bloquear conexiones a servicios, como por ejemplo, Telnet, HTTP o FTP. A tales aplicaciones se les denomina "servicios proxy", mientras que al sistema donde se ejecutan se le llama "gateway de aplicación". 
+                En un escenario práctico, consideremos una interconexión entre dos redes, una en París y otra en Londres, ambas operando con el protocolo IPv6. Estas redes están conectadas a través de un enrutador multiprotocolo que utiliza IPv4 para la comunicación entre ellas. Este enrutador cuenta con un extremo en la red de París y otro en la red de Londres.
             </p>
             <p>
-                Los servicios proxy ofrecen múltiples ventajas orientadas a fortalecer la seguridad. Principalmente, restringen el acceso únicamente a los servicios para los cuales se ha configurado un proxy. Por ejemplo, si el "gateway de aplicación" de una organización incluye proxies solo para Telnet, HTTP y FTP, cualquier otro servicio quedará automáticamente inaccesible para todos los usuarios, reforzando así el control sobre las actividades permitidas en la red.
+                Cuando se envía un paquete desde París, el enrutador encapsula el paquete IPv6 dentro de un encabezado IPv4, dirigiéndolo al extremo IPv4 del enrutador multiprotocolo conectado a la red IPv6 en Londres. Al llegar, el paquete IPv4 es desempaquetado, recuperando el paquete IPv6 original, que puede continuar su tránsito dentro de la red IPv6 de destino. En resumen, el paquete IPv6 es temporalmente envuelto en un paquete IPv4 para atravesar la conexión intermedia.
             </p>
-            <div class="img-alt">
-                <img src="../src/img/Figura 6. Implantación usando un servidor proxy.png" alt="">
-                 <p>Figura 6. Implantación usando un servidor proxy.</p>
-             </div>
+            <div class="img-tunel">
+                <img src="../src/img/Figura 3. Encapsulación IPv6 sobre IPv4 en Redes Interconectadas.png" alt="">
+                 <p>Figura 3. Encapsulación IPv6 sobre IPv4 en Redes Interconectadas.</p>
+            </div>
         </div>
     </main>
     <div class="gotop-container">
